@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Epitech Headers:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Epitech_Headers_jar</output-path>
+    <root id="archive" name="Epitech Headers.jar">
+      <element id="module-output" name="Epitech Headers" />
+    </root>
+  </artifact>
+</component>

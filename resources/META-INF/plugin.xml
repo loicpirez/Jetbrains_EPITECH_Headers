@@ -1,0 +1,44 @@
+<idea-plugin version="2">
+  <id>fr.hugolaloge.epitechheaders</id>
+  <name>Epitech Headers</name>
+  <version>0.2</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService serviceImplementation="fr.hugolaloge.epitechheaders.Settings"/>
+    <applicationConfigurable instance="fr.hugolaloge.epitechheaders.Configuration"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="EpitechHeaders.MakeHeaders" class="fr.hugolaloge.epitechheaders.MakeHeaders" text="Make_Headers"
+            description="Create or update the file headers">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl C" second-keystroke="ctrl H"/>
+    </action>
+  </actions>
+
+  <application-components>
+    <component>
+      <implementation-class>fr.hugolaloge.epitechheaders.OnFileSaveComponent</implementation-class>
+    </component>
+  </application-components>
+</idea-plugin>
